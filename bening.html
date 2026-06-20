@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu yang Istimewa</title>
+    
+    <style>
+        /* Mengatur latar belakang dan posisi ke tengah */
+        body {
+            background-color: #ffe6ea; /* Warna pink pastel */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Desain kartu ucapan */
+        .kartu {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+            text-align: center;
+            max-width: 400px;
+            border-top: 6px solid #ffb6c1; /* Garis pink di atas */
+        }
+
+        h1 {
+            color: #ff69b4; /* Warna pink terang */
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Desain tombol */
+        .tombol {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .tombol:hover {
+            background-color: #ff69b4; /* Berubah warna saat disentuh kursor */
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        /* Desain pesan kejutan (Awalnya disembunyikan) */
+        #kejutan {
+            display: none;
+            margin-top: 25px;
+            font-size: 18px;
+            color: #d81b60;
+            font-weight: bold;
+            animation: muncul 1s ease-in-out;
+        }
+
+        /* Efek animasi muncul perlahan */
+        @keyframes muncul {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kartu">
+        <h1>Hai, Bening Kinasih! 🌸</h1>
+        <p>Selamat bertambah usiamu, berkah umur, ilmu dan rezeki.</p>
+        <p>Semoga segala yang di cita-cita kan terpenuhi</p>
+        
+        <!-- Tombol untuk memunculkan pesan -->
+        <button class="tombol" onclick="bukaKejutan()">Ada Pesan Untukmu</button>
+        
+        <!-- Pesan yang disembunyikan -->
+        <div id="kejutan">
+            ✨ Semoga segera jadi ipar 🤣✨
+        </div>
+    </div>
+
+    <script>
+        // Fungsi JavaScript untuk menampilkan pesan kejutan
+        function bukaKejutan() {
+            var elemenKejutan = document.getElementById("kejutan");
+            elemenKejutan.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
